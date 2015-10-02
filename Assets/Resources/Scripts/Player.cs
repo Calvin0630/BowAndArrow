@@ -18,6 +18,9 @@ public class Player : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
         rBody.velocity = new Vector3(Input.GetAxis("Horizontal") * moveSpeed, rBody.velocity.y, 0);
+        if (Input.GetButtonDown("Jump")) {
+            rBody.AddForce(jump);
+        }
 
 	}
 }
